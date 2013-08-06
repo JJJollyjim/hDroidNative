@@ -1,10 +1,10 @@
 package com.hdubapp.hdub;
 
 import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
 
-public class MainActivity extends Activity {
+import com.actionbarsherlock.app.SherlockActivity;
+
+public class MainActivity extends SherlockActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
