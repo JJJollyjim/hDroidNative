@@ -35,8 +35,8 @@ public class TimetableActivity extends SherlockFragmentActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		new MenuInflater(this).inflate(R.menu.main, menu);
-		
+		new MenuInflater(this).inflate(R.menu.timetable, menu);
+
 		return super.onCreateOptionsMenu(menu);
 	}
 

@@ -1,5 +1,9 @@
 package com.hdubapp.hdub;
 
+import com.hdubapp.hdub.R;
+import com.hdubapp.hdub.R.id;
+import com.hdubapp.hdub.R.layout;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
