@@ -7,7 +7,6 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 
 import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.app.ActionBar.OnNavigationListener;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
@@ -20,8 +19,6 @@ public class ListNavManager implements OnNavigationListener {
 	public ListNavManager(Context ctx, int ctxPosition) {
 		this.ctx = (SherlockFragmentActivity) ctx;
 		this.ctxPosition = ctxPosition;
-
-		Log.i(TAG, "Constructor: " + ctxPosition);
 	}
 
 	public void setupNav() {
@@ -51,11 +48,9 @@ public class ListNavManager implements OnNavigationListener {
 
 	@Override
 	public boolean onNavigationItemSelected(int itemPosition, long itemId) {
-		Log.i(TAG, "OnNavigationItemSelected: " + itemPosition
-				+ ". Constructor: " + ctxPosition);
 		if (itemPosition != ctxPosition) {
 			Intent intent = null;
-			
+
 			if (itemPosition == 0) {
 				intent = new Intent(ctx.getApplicationContext(),
 						TimetableActivity.class);
@@ -65,7 +60,7 @@ public class ListNavManager implements OnNavigationListener {
 			} else {
 				Log.wtf(TAG, "Unknown itemPosition! What a terrible failiure!");
 			}
-			
+
 			ctx.startActivity(intent);
 			ctx.overridePendingTransition(0, 0);
 		}

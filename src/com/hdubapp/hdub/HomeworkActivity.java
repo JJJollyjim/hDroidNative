@@ -5,9 +5,6 @@ import android.os.Bundle;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
-import com.hdubapp.hdub.R;
-import com.hdubapp.hdub.R.layout;
-import com.hdubapp.hdub.R.menu;
 
 public class HomeworkActivity extends SherlockFragmentActivity {
 	private static final String TAG = "hDroidNative.HomeworkActivity";
@@ -25,7 +22,7 @@ public class HomeworkActivity extends SherlockFragmentActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		new MenuInflater(this).inflate(R.menu.timetable, menu);
+		new MenuInflater(this).inflate(R.menu.homework, menu);
 
 		return super.onCreateOptionsMenu(menu);
 	}

@@ -27,7 +27,7 @@ public class TimetableActivity extends SherlockFragmentActivity {
 		// Connect ViewPager with VPI Title-strip
 		TitlePageIndicator tabs = (TitlePageIndicator) findViewById(R.id.titles);
 		tabs.setViewPager(pager);
-		
+
 		// Set up navigation
 		navMan = new ListNavManager(this, 0);
 		navMan.setupNav();
@@ -45,6 +45,9 @@ public class TimetableActivity extends SherlockFragmentActivity {
 		if (item.getItemId() == R.id.action_settings) {
 			Toast.makeText(this, "Test...", Toast.LENGTH_LONG).show();
 			return true;
+		} else if (item.getItemId() == R.id.action_pickday) {
+			APIManager man = new APIManager();
+
 		}
 
 		return super.onOptionsItemSelected(item);
