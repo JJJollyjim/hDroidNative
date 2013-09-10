@@ -43,11 +43,11 @@ public class TimetableActivity extends SherlockFragmentActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.action_settings) {
-			Toast.makeText(this, "Test...", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "Opening settings...", Toast.LENGTH_LONG).show();
 			return true;
 		} else if (item.getItemId() == R.id.action_pickday) {
-			APIManager man = new APIManager();
-
+			Toast.makeText(this, "Picking day...", Toast.LENGTH_LONG).show();
+			return true;
 		}
 
 		return super.onOptionsItemSelected(item);
