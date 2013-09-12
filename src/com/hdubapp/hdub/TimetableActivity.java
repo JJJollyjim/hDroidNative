@@ -22,7 +22,7 @@ public class TimetableActivity extends SherlockFragmentActivity {
 
 		// Connect Adapter with ViewPager
 		ViewPager pager = (ViewPager) findViewById(R.id.pager);
-		pager.setAdapter(new TimetablePagerAdapter(getSupportFragmentManager()));
+		pager.setAdapter(new TimetablePagerAdapter(this));
 
 		// Connect ViewPager with VPI Title-strip
 		TitlePageIndicator tabs = (TitlePageIndicator) findViewById(R.id.titles);
@@ -43,7 +43,8 @@ public class TimetableActivity extends SherlockFragmentActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.action_settings) {
-			Toast.makeText(this, "Opening settings...", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "Opening settings...", Toast.LENGTH_LONG)
+					.show();
 			return true;
 		} else if (item.getItemId() == R.id.action_pickday) {
 			Toast.makeText(this, "Picking day...", Toast.LENGTH_LONG).show();

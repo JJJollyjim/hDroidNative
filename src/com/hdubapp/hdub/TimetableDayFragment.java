@@ -13,16 +13,18 @@ import android.widget.TextView;
 
 public class TimetableDayFragment extends Fragment {
 	static final String KEY_POSITION = "position";
+	private static final String TAG = "hDroidNative.TimetableDayFragment";
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View result = inflater.inflate(R.layout.fragment_timetable_day, container, false);
+		View result = inflater.inflate(R.layout.fragment_timetable_day,
+				container, false);
 		TextView text = (TextView) result.findViewById(R.id.text);
-		
+
 		int position = getArguments().getInt(KEY_POSITION, -1);
-		text.setText("Fragment #" + (position + 1));
-		
+		text.setText("Fragment #" + position);
+
 		return result;
 	}
 
